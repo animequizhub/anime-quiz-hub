@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - Anime Quiz Hub</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>🎮 Anime Quiz Hub</h1>
+                <p id="welcomeText">Loading account...</p>
+            </div>
+
+            <button id="logoutBtn" class="logout" type="button">
+                Logout
+            </button>
+        </header>
+
+        <section class="stats-grid">
+
+            <article class="card">
+                <h2>📚 Anime Quizzes</h2>
+
+                <p>
+                    Test your knowledge and earn ranks and XP.
+                </p>
+
+                <button id="quizBtn" type="button">
+                    Open Quiz List
+                </button>
+            </article>
+
+            <article class="card">
+                <h2>🏆 Latest Result</h2>
+
+                <p id="latestResult">
+                    No quiz taken yet.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>👤 My Profile</h2>
+
+                <p>
+                    View your level, XP, rank, and quiz history.
+                </p>
+
+                <button id="profileBtn" type="button">
+                    Open Profile
+                </button>
+            </article>
+
+            <article class="card">
+                <h2>🌍 Leaderboard</h2>
+
+                <p>
+                    See the highest-scoring players.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='leaderboard.html'"
+                >
+                    Open Leaderboard
+                </button>
+            </article>
+
+            <article class="card">
+                <h2>📜 Quiz History</h2>
+
+                <p>
+                    Review your previous quiz attempts.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='history.html'"
+                >
+                    View History
+                </button>
+            </article>
+
+            <article class="card">
+                <h2>⚙️ Settings</h2>
+
+                <p>
+                    Change your password and manage your account.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='settings.html'"
+                >
+                    Open Settings
+                </button>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="dashboard.js?v=3"></script>
+
+</body>
+</html>

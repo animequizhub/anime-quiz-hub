@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Firebase Test</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background: #0d1117;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            background: #161b22;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #238636;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 20px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="box">
+        <h1>Firebase Test</h1>
+
+        <p id="account">Checking account...</p>
+
+        <button id="testBtn" type="button">
+            Test Firestore Save
+        </button>
+
+        <p id="status">Waiting...</p>
+
+        <button
+            type="button"
+            onclick="window.location.href='dashboard.html'"
+        >
+            Dashboard
+        </button>
+    </main>
+
+    <script type="module" src="firebase-test.js"></script>
+
+</body>
+</html>

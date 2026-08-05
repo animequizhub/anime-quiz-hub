@@ -1,0 +1,26 @@
+:root{
+    --bg:#0d1117;
+    --card:#161b22;
+    --button:#238636;
+    --buttonHover:#2ea043;
+    --gold:#FFD700;
+    --text:#ffffff;
+    --secondary:#9ca3af;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+.card{
+    background:var(--card);
+}
+
+button{
+    background:var(--button);
+}
+
+button:hover{
+    background:var(--buttonHover);
+}

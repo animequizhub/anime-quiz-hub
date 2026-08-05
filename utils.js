@@ -1,0 +1,16 @@
+function getRank(score,total){
+
+const percentage=(score/total)*100;
+
+if(percentage==100) return "S+";
+if(percentage>=90) return "S";
+if(percentage>=80) return "A";
+if(percentage>=70) return "B";
+if(percentage>=60) return "C";
+if(percentage>=50) return "D";
+
+return "F";
+
+}
+
+export { getRank };
