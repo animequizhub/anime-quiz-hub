@@ -20,7 +20,7 @@ async function loadLeaderboard() {
     try {
         const leaderboardQuery = query(
             collection(db, "leaderboard"),
-            orderBy("totalXP", "desc")
+            orderBy("percentage", "desc")
         );
 
         const snapshot = await getDocs(leaderboardQuery);
@@ -28,7 +28,6 @@ async function loadLeaderboard() {
         if (snapshot.empty) {
             leaderboardList.innerHTML =
                 "<p>No leaderboard records yet.</p>";
-
             return;
         }
 
@@ -47,14 +46,17 @@ async function loadLeaderboard() {
                     #${position} ${player.playerName || "Anime Player"}
                 </h3>
 
-                <p>Total XP: ${player.totalXP || 0}</p>
+                <p>
+                    Score: ${player.score || 0}/${player.total || 0}
+                </p>
 
                 <p>
-                    Latest Score:
-                    ${player.score || 0}/${player.total || 0}
+                    Percentage: ${player.percentage || 0}%
                 </p>
 
                 <p>Rank: ${player.rank || "F"}</p>
+
+                <p>Total XP: ${player.totalXP || 0}</p>
             `;
 
             leaderboardList.appendChild(playerCard);
